@@ -212,39 +212,39 @@ export default function LandingPage() {
           />
         </motion.div>
 
-        <div className="container relative z-20 px-6 pt-20">
+        <div className="container relative z-20 px-6 pt-28">
           <motion.div 
             initial="hidden"
             animate="show"
             variants={staggerContainer}
             className="max-w-4xl"
           >
-            <motion.div variants={fadeUp} className="flex items-center space-x-4 mb-6">
-              <div className="h-[2px] w-12 bg-primary"></div>
-              <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm">Prime Commercial Asset</span>
+            <motion.div variants={fadeUp} className="flex items-center space-x-4 mb-5">
+              <div className="h-[2px] w-10 bg-primary"></div>
+              <span className="text-primary font-bold uppercase tracking-[0.2em] text-xs">Prime Commercial Asset · Tuticorin</span>
             </motion.div>
             
-            <motion.h1 variants={fadeUp} className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-6 text-white text-balance">
-              Premium Commercial Infrastructure <br/>
+            <motion.h1 variants={fadeUp} className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-5 text-white">
+              Premium Commercial<br/>Infrastructure{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-200">Investment Opportunity</span>
             </motion.h1>
             
-            <motion.p variants={fadeUp} className="text-lg md:text-xl text-gray-300 font-light mb-10 max-w-2xl leading-relaxed border-l-2 border-primary/50 pl-6">
+            <motion.p variants={fadeUp} className="text-base md:text-lg text-gray-300 font-light mb-8 max-w-2xl leading-relaxed border-l-2 border-primary/50 pl-5">
               Strategically positioned near Tuticorin Airport, Harbour Connectivity & National Highway Access. A ₹10Cr+ asset built for exponential appreciation.
             </motion.p>
             
-            <motion.div variants={fadeUp} className="flex flex-wrap gap-4 mb-12">
+            <motion.div variants={fadeUp} className="flex flex-wrap gap-2 mb-10">
               {[
-                { icon: <Map className="w-4 h-4"/>, text: "2.5 Acre Land" },
-                { icon: <Globe className="w-4 h-4"/>, text: "400 Ft Highway Frontage" },
-                { icon: <Plane className="w-4 h-4"/>, text: "1-2 KM Airport" },
-                { icon: <Ship className="w-4 h-4"/>, text: "20 KM Harbour" },
-                { icon: <MapPin className="w-4 h-4"/>, text: "Vagaikulam Toll Plaza" },
-                { icon: <TrendingUp className="w-4 h-4"/>, text: "High Appreciation Corridor" }
+                { icon: <Map className="w-3 h-3"/>, text: "2.5 Acre Land" },
+                { icon: <Globe className="w-3 h-3"/>, text: "400 Ft Highway Frontage" },
+                { icon: <Plane className="w-3 h-3"/>, text: "1–2 KM Airport" },
+                { icon: <Ship className="w-3 h-3"/>, text: "20 KM Harbour" },
+                { icon: <MapPin className="w-3 h-3"/>, text: "Vagaikulam Toll" },
+                { icon: <TrendingUp className="w-3 h-3"/>, text: "High Appreciation Corridor" }
               ].map((stat, i) => (
-                <div key={i} className="flex items-center space-x-2 bg-white/5 backdrop-blur-sm border border-white/10 px-4 py-2 rounded-full">
+                <div key={i} className="flex items-center space-x-1.5 bg-white/5 backdrop-blur-sm border border-white/10 px-3 py-1.5 rounded-full">
                   <span className="text-primary">{stat.icon}</span>
-                  <span className="text-xs font-medium text-white/90 uppercase tracking-wider">{stat.text}</span>
+                  <span className="text-[11px] font-medium text-white/90 uppercase tracking-wider whitespace-nowrap">{stat.text}</span>
                 </div>
               ))}
             </motion.div>

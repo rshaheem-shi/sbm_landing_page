@@ -57,77 +57,50 @@
 }
 
 :root {
-  /* Default to dark mode theme for this project */
-  --background: 240 10% 4%; /* #0a0a0f */
-  --foreground: 0 0% 100%;
-  
-  --card: 240 10% 6%; /* #0d0d1a approximated */
-  --card-foreground: 0 0% 100%;
-  --card-border: 45 61% 47%; /* #e2b93b at very low opacity for borders */
+  /* Light theme — colours drawn from the SBM Pranav logo */
+  --background: 42 30% 97%;       /* warm off-white #FAF8F4 */
+  --foreground: 0 25% 13%;        /* deep charcoal #201515 */
 
-  --popover: 240 10% 6%;
-  --popover-foreground: 0 0% 100%;
-  --popover-border: 45 61% 47%;
+  --card: 40 28% 93%;             /* warm cream card #F2EBE0 */
+  --card-foreground: 0 25% 13%;
+  --card-border: 43 55% 50%;
 
-  --primary: 45 61% 47%; /* #e2b93b gold */
-  --primary-foreground: 240 10% 4%;
+  --popover: 42 30% 97%;
+  --popover-foreground: 0 25% 13%;
+  --popover-border: 40 20% 80%;
 
-  --secondary: 240 10% 12%;
-  --secondary-foreground: 0 0% 100%;
+  /* Gold from logo buildings */
+  --primary: 43 73% 47%;          /* #C9A227 */
+  --primary-foreground: 0 25% 10%;
 
-  --muted: 240 10% 15%;
-  --muted-foreground: 240 5% 65%;
+  /* Maroon from "SBM & PRANAV" logo text */
+  --secondary: 0 62% 28%;         /* #731C1C */
+  --secondary-foreground: 42 30% 97%;
 
-  --accent: 45 61% 47%;
-  --accent-foreground: 0 0% 100%;
+  --muted: 40 22% 88%;            /* warm light grey */
+  --muted-foreground: 30 12% 42%; /* warm medium grey */
 
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 100%;
+  --accent: 43 73% 47%;
+  --accent-foreground: 0 25% 10%;
 
-  --border: 240 10% 15%;
-  --input: 240 10% 15%;
-  --ring: 45 61% 47%;
+  --destructive: 0 84% 55%;
+  --destructive-foreground: 42 30% 97%;
 
-  --chart-1: 45 61% 47%;
-  --chart-2: 45 74% 56%;
-  --chart-3: 45 84% 65%;
-  --chart-4: 45 61% 30%;
-  --chart-5: 45 50% 40%;
+  --border: 40 18% 82%;
+  --input: 40 18% 82%;
+  --ring: 43 73% 47%;
+
+  --chart-1: 43 73% 47%;
+  --chart-2: 43 73% 38%;
+  --chart-3: 0 62% 28%;
+  --chart-4: 43 50% 60%;
+  --chart-5: 0 40% 40%;
 
   --app-font-sans: 'Inter', sans-serif;
   --app-font-serif: 'Playfair Display', serif;
   --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  
-  --radius: 0.5rem;
-}
 
-.dark {
-  --background: 240 10% 4%;
-  --foreground: 0 0% 100%;
-  --card: 240 10% 6%;
-  --card-foreground: 0 0% 100%;
-  --card-border: 45 61% 47%;
-  --popover: 240 10% 6%;
-  --popover-foreground: 0 0% 100%;
-  --popover-border: 45 61% 47%;
-  --primary: 45 61% 47%;
-  --primary-foreground: 240 10% 4%;
-  --secondary: 240 10% 12%;
-  --secondary-foreground: 0 0% 100%;
-  --muted: 240 10% 15%;
-  --muted-foreground: 240 5% 65%;
-  --accent: 45 61% 47%;
-  --accent-foreground: 0 0% 100%;
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 100%;
-  --border: 240 10% 15%;
-  --input: 240 10% 15%;
-  --ring: 45 61% 47%;
-  --chart-1: 45 61% 47%;
-  --chart-2: 45 74% 56%;
-  --chart-3: 45 84% 65%;
-  --chart-4: 45 61% 30%;
-  --chart-5: 45 50% 40%;
+  --radius: 0.5rem;
 }
 
 @layer base {

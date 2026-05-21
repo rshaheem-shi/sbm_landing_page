@@ -274,7 +274,7 @@ export default function BrochurePage() {
 
           <div className="mt-12 flex flex-wrap justify-center gap-5">
             <a
-              href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("SBM-Pranav Investment Inquiry")}`}
+              href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("SBM-Pranav Investment Inquiry")}&body=${encodeURIComponent("Hello, I am interested in knowing more about the property you posted. Could you please share the property details.")}`}
               className="rounded-2xl bg-yellow-500 px-10 py-5 text-lg font-semibold text-black transition hover:bg-yellow-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
             >
               Email Us Now

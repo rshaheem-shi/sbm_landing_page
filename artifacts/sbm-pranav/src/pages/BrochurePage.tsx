@@ -1,5 +1,6 @@
 import { useLocation } from "wouter";
-import { ArrowLeft, MessageSquare } from "lucide-react";
+import { ArrowLeft, MessageSquare, Plane, Ship, Truck, TrendingUp } from "lucide-react";
+import { type LucideIcon } from "lucide-react";
 import { WA_LINK, CONTACT_EMAIL, CONTACT_PHONE } from "@/lib/constants";
 import sitePhoto from "@assets/magnific_vuRoQ8xa47_(1)_1779344385534.png";
 import gallery1 from "@/assets/gallery-1.png";
@@ -8,24 +9,34 @@ import gallery3 from "@/assets/gallery-3.png";
 import gallery4 from "@/assets/gallery-4.png";
 import logoImg from "@assets/SBM_Pranav_1779330703662.png";
 
-const LOCATION_ADVANTAGES = [
+interface LocationAdvantage {
+  icon: LucideIcon;
+  title: string;
+  desc: string;
+}
+
+const LOCATION_ADVANTAGES: LocationAdvantage[] = [
   {
+    icon: Plane,
     title: "Airport Access",
     desc: "1–2 KM to Tuticorin Airport — fast connectivity for business travel and air cargo logistics.",
   },
   {
+    icon: Ship,
     title: "Harbour Connectivity",
     desc: "20 KM to Tuticorin Harbour — ideal for import/export and industrial operations.",
   },
   {
+    icon: Truck,
     title: "Highway Visibility",
     desc: "400 ft national highway frontage — prime commercial branding and accessibility.",
   },
   {
+    icon: TrendingUp,
     title: "Future Appreciation",
     desc: "Government-backed industrial expansion zone with high demand growth corridor.",
   },
-] as const;
+];
 
 const COMMERCIAL_USES = [
   "Warehouse & Logistics Hub",
@@ -179,12 +190,14 @@ export default function BrochurePage() {
           </div>
 
           <ul className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6" aria-label="Location advantages">
-            {LOCATION_ADVANTAGES.map(({ title, desc }) => (
+            {LOCATION_ADVANTAGES.map(({ icon: Icon, title, desc }) => (
               <li key={title} className="rounded-[28px] border border-zinc-800 bg-black p-8">
                 <div
-                  className="h-14 w-14 rounded-2xl bg-yellow-500/10 border border-yellow-500/20"
+                  className="h-14 w-14 rounded-2xl bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center text-yellow-400"
                   aria-hidden="true"
-                />
+                >
+                  <Icon className="w-7 h-7" />
+                </div>
                 <h3 className="mt-8 text-2xl font-semibold">{title}</h3>
                 <p className="mt-4 leading-8 text-zinc-400">{desc}</p>
               </li>

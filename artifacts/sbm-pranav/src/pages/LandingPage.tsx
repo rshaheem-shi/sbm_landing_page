@@ -99,8 +99,19 @@ export default function LandingPage() {
     defaultValues: { name: "", phone: "", email: "", company: "", interest: "", message: "" },
   });
 
-  const onSubmit = () => {
-    toast({ title: "Inquiry Received", description: "Our team will contact you within 24 hours." });
+  const onSubmit = (values: z.infer<typeof formSchema>) => {
+    const subject = encodeURIComponent(`SBM-Pranav Investment Inquiry — ${values.name}`);
+    const body = encodeURIComponent(
+      `New investor inquiry from the SBM-Pranav landing page:\n\n` +
+      `Name: ${values.name}\n` +
+      `Phone: ${values.phone}\n` +
+      `Email: ${values.email}\n` +
+      `Company: ${values.company || "—"}\n` +
+      `Investment Interest: ${values.interest}\n\n` +
+      `Message:\n${values.message || "—"}`
+    );
+    window.open(`mailto:rshaheem311@gmail.com?subject=${subject}&body=${body}`, "_blank");
+    toast({ title: "Opening Email Client", description: "Your details are pre-filled — just hit Send." });
     form.reset();
   };
 
@@ -217,7 +228,7 @@ export default function LandingPage() {
               </Button>
               <Button size="lg" variant="outline"
                 className="border-white/50 text-white hover:bg-white/10 h-12 px-7 text-sm font-semibold rounded-none bg-transparent"
-                onClick={() => window.open("https://wa.me/919876543210", "_blank")}>
+                onClick={() => window.open("https://wa.me/918940089888", "_blank")}>
                 <MessageSquare className="mr-2 w-4 h-4" /> WhatsApp
               </Button>
               <Button size="lg" variant="ghost"
@@ -585,8 +596,8 @@ export default function LandingPage() {
 
               <div className="space-y-5">
                 {[
-                  { icon: <Phone className="w-4 h-4" />, label: "Direct Line", value: "+91 98765 43210" },
-                  { icon: <Mail className="w-4 h-4" />, label: "Email Inquiries", value: "invest@sbm-pranav.com" },
+                  { icon: <Phone className="w-4 h-4" />, label: "Direct Line", value: "+91 89400 89888" },
+                  { icon: <Mail className="w-4 h-4" />, label: "Email Inquiries", value: "rshaheem311@gmail.com" },
                 ].map((c, i) => (
                   <div key={i} className="flex items-center">
                     <div className="w-10 h-10 bg-background border border-border flex items-center justify-center mr-3 shrink-0" style={{ color: GOLD }}>
@@ -692,7 +703,7 @@ export default function LandingPage() {
                     </Button>
                     <Button type="button" variant="outline"
                       className="flex-1 border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white h-11 text-sm font-bold rounded-none bg-transparent transition-colors"
-                      onClick={() => window.open("https://wa.me/919876543210", "_blank")}
+                      onClick={() => window.open("https://wa.me/918940089888", "_blank")}
                       data-testid="button-whatsapp">
                       <MessageSquare className="mr-2 w-4 h-4" /> WhatsApp
                     </Button>
@@ -735,11 +746,11 @@ export default function LandingPage() {
                 </li>
                 <li className="flex items-center text-muted-foreground text-sm">
                   <Phone className="w-4 h-4 mr-2.5 shrink-0" style={{ color: GOLD }} />
-                  <span>+91 98765 43210</span>
+                  <span>+91 89400 89888</span>
                 </li>
                 <li className="flex items-center text-muted-foreground text-sm">
                   <Mail className="w-4 h-4 mr-2.5 shrink-0" style={{ color: GOLD }} />
-                  <span>invest@sbm-pranav.com</span>
+                  <span>rshaheem311@gmail.com</span>
                 </li>
               </ul>
             </div>
@@ -755,7 +766,7 @@ export default function LandingPage() {
 
       {/* ── FLOATING WHATSAPP ── */}
       <a
-        href="https://wa.me/919876543210"
+        href="https://wa.me/918940089888"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-13 h-13 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"

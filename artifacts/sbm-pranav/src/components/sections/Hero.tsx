@@ -1,3 +1,4 @@
+import { useLocation } from "wouter";
 import { motion, useScroll, useTransform, type Variants } from "framer-motion";
 import { ArrowRight, Download, MessageSquare, Map, Globe, TrendingUp, ChevronDown, Plane, Ship, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -25,6 +26,7 @@ const fadeUp: Variants = {
 };
 
 export default function Hero() {
+  const [, navigate] = useLocation();
   const { scrollY } = useScroll();
   const scrollTo = useScrollTo();
 
@@ -120,6 +122,8 @@ export default function Hero() {
               size="lg"
               variant="ghost"
               className="text-white/80 hover:bg-white/10 h-12 px-7 text-sm font-semibold rounded-none"
+              onClick={() => navigate("/brochure")}
+              aria-label="View investment brochure"
             >
               <Download className="mr-2 w-4 h-4" aria-hidden="true" /> Brochure
             </Button>

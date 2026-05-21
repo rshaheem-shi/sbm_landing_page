@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 
-import sitePhoto from "@assets/magnific_vuRoQ8xa47_(1)_1779327684220.png";
+import sitePhoto from "@assets/magnific_vuRoQ8xa47_(1)_1779344385534.png";
 import logoImg from "@assets/SBM_Pranav_1779330703662.png";
 import gallery1 from "@/assets/gallery-1.png";
 import gallery2 from "@/assets/gallery-2.png";

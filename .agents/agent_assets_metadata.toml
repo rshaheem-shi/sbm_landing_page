@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "_1yIwopogGYGftP4QMSVM"
@@ -24,3 +23,9 @@ id = "Ro9PVXRDM_vEgukPlQnma"
 uri = "file://artifacts/sbm-pranav/src/assets/gallery-4.png"
 type = "image"
 title = "Commercial real estate site morning"
+
+[[outputs]]
+id = "IVcjtDeIYSp-dhvVE7PM-"
+uri = "file://sbm-pranav-php.tar.gz"
+type = "unspecified"
+title = "SBM-Pranav PHP/HTML/CSS Site"

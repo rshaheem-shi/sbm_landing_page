@@ -63,6 +63,7 @@ const AnimatedCounter = ({ end, suffix = "", duration = 2 }: { end: number; suff
 
 const GOLD = "#C9A227";
 const MAROON = "#731C1C";
+const WA_LINK = `https://wa.me/918940089888?text=${encodeURIComponent("Hello, I am interested in knowing more about the property you posted. Could you please share the property details.")}`;
 
 export default function LandingPage() {
   const { scrollY } = useScroll();
@@ -228,7 +229,7 @@ export default function LandingPage() {
               </Button>
               <Button size="lg" variant="outline"
                 className="border-white/50 text-white hover:bg-white/10 h-12 px-7 text-sm font-semibold rounded-none bg-transparent"
-                onClick={() => window.open("https://wa.me/918940089888", "_blank")}>
+                onClick={() => window.open(WA_LINK, "_blank")}>
                 <MessageSquare className="mr-2 w-4 h-4" /> WhatsApp
               </Button>
               <Button size="lg" variant="ghost"
@@ -703,7 +704,7 @@ export default function LandingPage() {
                     </Button>
                     <Button type="button" variant="outline"
                       className="flex-1 border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white h-11 text-sm font-bold rounded-none bg-transparent transition-colors"
-                      onClick={() => window.open("https://wa.me/918940089888", "_blank")}
+                      onClick={() => window.open(WA_LINK, "_blank")}
                       data-testid="button-whatsapp">
                       <MessageSquare className="mr-2 w-4 h-4" /> WhatsApp
                     </Button>
@@ -766,7 +767,7 @@ export default function LandingPage() {
 
       {/* ── FLOATING WHATSAPP ── */}
       <a
-        href="https://wa.me/918940089888"
+        href={WA_LINK}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-13 h-13 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"

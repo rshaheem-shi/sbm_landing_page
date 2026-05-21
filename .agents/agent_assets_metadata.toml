@@ -1,0 +1,26 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "_1yIwopogGYGftP4QMSVM"
+uri = "file://artifacts/sbm-pranav/src/assets/gallery-1.png"
+type = "image"
+title = "Drone view commercial land highway sunset"
+
+[[generated]]
+id = "l1e8Q3j38sqhL6hwncMjU"
+uri = "file://artifacts/sbm-pranav/src/assets/gallery-2.png"
+type = "image"
+title = "Wide national highway green median"
+
+[[generated]]
+id = "GJTYbQ9EHjicd-7t9ailS"
+uri = "file://artifacts/sbm-pranav/src/assets/gallery-3.png"
+type = "image"
+title = "Tuticorin port industrial harbour"
+
+[[generated]]
+id = "Ro9PVXRDM_vEgukPlQnma"
+uri = "file://artifacts/sbm-pranav/src/assets/gallery-4.png"
+type = "image"
+title = "Commercial real estate site morning"

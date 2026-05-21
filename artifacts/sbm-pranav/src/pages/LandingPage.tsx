@@ -18,9 +18,6 @@ import { Textarea } from "@/components/ui/textarea";
 import {
   Form, FormControl, FormField, FormItem, FormLabel, FormMessage
 } from "@/components/ui/form";
-import {
-  Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
-} from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 
 import sitePhoto from "@assets/magnific_vuRoQ8xa47_(1)_1779344385534.png";
@@ -91,13 +88,12 @@ export default function LandingPage() {
     phone: z.string().min(10, "Valid phone number is required"),
     email: z.string().email("Valid email is required"),
     company: z.string().optional(),
-    interest: z.string().min(1, "Please select an interest"),
     message: z.string().optional(),
   });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: { name: "", phone: "", email: "", company: "", interest: "", message: "" },
+    defaultValues: { name: "", phone: "", email: "", company: "", message: "" },
   });
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
@@ -108,7 +104,6 @@ export default function LandingPage() {
       `Phone: ${values.phone}\n` +
       `Email: ${values.email}\n` +
       `Company: ${values.company || "—"}\n` +
-      `Investment Interest: ${values.interest}\n\n` +
       `Message:\n${values.message || "—"}`
     );
     window.open(`mailto:rshaheem311@gmail.com?subject=${subject}&body=${body}`, "_blank");
@@ -660,28 +655,6 @@ export default function LandingPage() {
                     )} />
                   </div>
 
-                  <FormField control={form.control} name="interest" render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-muted-foreground uppercase tracking-widest text-[10px]">Investment Interest</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger className="bg-transparent border-border focus:ring-primary h-10 rounded-none text-foreground" data-testid="select-interest">
-                            <SelectValue placeholder="Select primary use case" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent className="bg-background border-border text-foreground rounded-none">
-                          <SelectItem value="logistics">Logistics & Warehousing</SelectItem>
-                          <SelectItem value="hotel">Premium Business Hotel</SelectItem>
-                          <SelectItem value="commercial">Commercial Complex</SelectItem>
-                          <SelectItem value="industrial">Industrial Yard</SelectItem>
-                          <SelectItem value="ev">EV Charging Hub</SelectItem>
-                          <SelectItem value="office">Corporate Office Space</SelectItem>
-                          <SelectItem value="other">Other / Mixed Use</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )} />
 
                   <FormField control={form.control} name="message" render={({ field }) => (
                     <FormItem>

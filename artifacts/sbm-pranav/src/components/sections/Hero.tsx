@@ -82,8 +82,7 @@ export default function Hero() {
             variants={fadeUp}
             className="text-base text-white/80 font-light mb-6 max-w-xl leading-relaxed border-l-2 border-primary/60 pl-4"
           >
-            Strategically positioned near Tuticorin Airport, Harbour Connectivity &amp; National
-            Highway Access. A ₹10Cr+ asset built for exponential appreciation.
+           Strategically located 400 ft frontage property beside Vagaikulam Toll Plaza, offering excellent connectivity to Tuticorin Airport and VOC Port.
           </motion.p>
 
           <motion.div variants={fadeUp} className="flex flex-wrap gap-2 mb-8" role="list" aria-label="Key property highlights">

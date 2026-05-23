@@ -10,13 +10,13 @@ interface UseCase {
 }
 
 const USE_CASES: UseCase[] = [
-  { icon: Truck,          title: "Logistics Park",      desc: "Port-to-airport transit routes" },
-  { icon: Factory,        title: "Warehouse Hub",       desc: "2.5 acre storage facilities" },
-  { icon: Hotel,          title: "Business Hotel",      desc: "Airport corporate transit" },
-  { icon: Building,       title: "Commercial Complex",  desc: "400ft highway frontage visibility" },
-  { icon: Factory,        title: "Industrial Yard",     desc: "Heavy machinery & export staging" },
-  { icon: BatteryCharging, title: "EV Charging Hub",   desc: "Highway fleet charging" },
-  { icon: Briefcase,      title: "Corporate Office",    desc: "Headquarters for maritime firms" },
+  { icon: Truck,          title: "Logistics Park",      desc: "Perfect for freight movement, port connectivity, and large-scale logistics operations." },
+  { icon: Factory,        title: "Warehouse Hub",       desc: "Ideal for modern warehousing, storage parks, and distribution centers with high ROI potential." },
+  { icon: Hotel,          title: "Business Hotel",      desc: "A prime opportunity for corporate hotels catering to airport and highway travelers." },
+  { icon: Building,       title: "Commercial Complex",  desc: "Leverage 400 ft highway frontage for maximum brand visibility and customer traffic." },
+  { icon: Factory,        title: "Industrial Yard",     desc: "Designed for heavy industries, machinery operations, and export-based businesses." },
+  { icon: BatteryCharging, title: "EV Charging Hub",   desc: "A future-ready destination for EV infrastructure and highway fleet charging networks." },
+  { icon: Briefcase,      title: "Tailored Commercial Opportunities",    desc: "Flexible development potential for custom business and investment requirements." },
 ];
 
 export default function UseCases() {

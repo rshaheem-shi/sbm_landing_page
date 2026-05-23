@@ -4,10 +4,10 @@ export const MAROON = "#731C1C" as const;
 const WA_MESSAGE =
   "Hello, I am interested in knowing more about the property you posted. Could you please share the property details.";
 
-export const WA_LINK = `https://wa.me/918940089888?text=${encodeURIComponent(WA_MESSAGE)}`;
+export const WA_LINK = `https://wa.me/919952228198?text=${encodeURIComponent(WA_MESSAGE)}`;
 
 export const CONTACT_EMAIL = "rshaheem311@gmail.com";
-export const CONTACT_PHONE = "+91 89400 89888";
+export const CONTACT_PHONE = "+91 99522 28198";
 export const CONTACT_ADDRESS =
   "Tuticorin Airport Road, Vagaikulam Toll Plaza, Tamil Nadu, India";
 

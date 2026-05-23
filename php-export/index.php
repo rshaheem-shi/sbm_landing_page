@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_submit'])) {
     }
 }
 
-$wa_link = 'https://wa.me/918940089888?text=' . urlencode('Hello, I am interested in knowing more about the property you posted. Could you please share the property details.');
+$wa_link = 'https://wa.me/919952228198?text=' . urlencode('Hello, I am interested in knowing more about the property you posted. Could you please share the property details.');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -501,7 +501,7 @@ $wa_link = 'https://wa.me/918940089888?text=' . urlencode('Hello, I am intereste
         <ul>
           <li><a href="javascript:void(0)" onclick="scrollTo('location')">Location Advantage</a></li>
           <li><a href="javascript:void(0)" onclick="scrollTo('usecases')">Commercial Uses</a></li>
-          <li><a href="javascript:void(0)" onclick="scrollTo('investment')">Investment Thesis</a></li>
+          <!-- <li><a href="javascript:void(0)" onclick="scrollTo('investment')">Investment Thesis</a></li> -->
           <li><a href="javascript:void(0)" onclick="scrollTo('gallery')">Site Gallery</a></li>
           <li><a href="javascript:void(0)" onclick="scrollTo('contact')">Contact Us</a></li>
         </ul>
@@ -514,7 +514,7 @@ $wa_link = 'https://wa.me/918940089888?text=' . urlencode('Hello, I am intereste
         </div>
         <div class="footer-contact-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.02 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
-          <span>+91 89400 89888</span>
+          <span>+91 99522 28198</span>
         </div>
         <div class="footer-contact-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>

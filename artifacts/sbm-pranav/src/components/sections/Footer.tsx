@@ -6,7 +6,7 @@ import logoImg from "@assets/SBM_Pranav_1779330703662.png";
 const QUICK_LINKS = [
   { id: "location",   label: "Location Advantage" },
   { id: "usecases",  label: "Commercial Uses" },
-  { id: "investment", label: "Investment Thesis" },
+  // { id: "investment", label: "Investment Thesis" },
   { id: "gallery",   label: "Site Gallery" },
   { id: "contact",   label: "Contact Us" },
 ] as const;

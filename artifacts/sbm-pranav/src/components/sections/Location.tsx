@@ -1,6 +1,10 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Plane, Ship, Truck, MapPin } from "lucide-react";
-import { GOLD, MAROON } from "@/lib/constants";
+
+import airportMap  from "@assets/Airport_2_SP_1779555831216.png";
+import harbourMap  from "@assets/Harbour_2_SP_1779555831220.png";
+import tvlMap      from "@assets/Tvl_2_SP_(1)_1779555831219.png";
 
 const LOCATION_CARDS = [
   {
@@ -25,7 +29,15 @@ const LOCATION_CARDS = [
   },
 ] as const;
 
+const MAP_TABS = [
+  { label: "Airport",     dist: "1 km",  img: airportMap,  alt: "Route map from SBM Pranav site to Tuticorin Airport — 1 km" },
+  { label: "Harbour",     dist: "20 km", img: harbourMap,  alt: "Route map from SBM Pranav site to Tuticorin Harbour — 20 km" },
+  { label: "Tirunelveli", dist: "30 km", img: tvlMap,       alt: "Route map from SBM Pranav site to Tirunelveli — 30 km" },
+] as const;
+
 export default function Location() {
+  const [active, setActive] = useState(0);
+
   return (
     <section id="location" aria-labelledby="location-heading" className="py-14 md:py-20 bg-card relative">
       <div
@@ -34,6 +46,7 @@ export default function Location() {
       />
 
       <div className="container relative z-10 px-6">
+        {/* Heading */}
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="flex items-center justify-center space-x-3 mb-3" aria-hidden="true">
             <div className="h-[2px] w-8 bg-primary" />
@@ -49,6 +62,7 @@ export default function Location() {
           </p>
         </div>
 
+        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
           {LOCATION_CARDS.map(({ icon: Icon, title, desc }, i) => (
             <motion.article
@@ -60,10 +74,7 @@ export default function Location() {
               className="group relative bg-background border border-border hover:border-primary/60 p-6 transition-all duration-400 overflow-hidden"
               aria-label={title}
             >
-              <div
-                className="absolute top-0 left-0 w-1 h-0 bg-primary transition-all duration-500 group-hover:h-full"
-                aria-hidden="true"
-              />
+              <div className="absolute top-0 left-0 w-1 h-0 bg-primary transition-all duration-500 group-hover:h-full" aria-hidden="true" />
               <div className="bg-primary/10 w-14 h-14 flex items-center justify-center mb-4 text-primary group-hover:scale-110 transition-transform duration-400">
                 <Icon className="w-7 h-7" aria-hidden="true" />
               </div>
@@ -73,98 +84,49 @@ export default function Location() {
           ))}
         </div>
 
-        {/* Schematic map visualisation */}
+        {/* Map tabs + image */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.97 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="w-full h-64 md:h-80 bg-background border border-border relative overflow-hidden flex items-center justify-center"
-          aria-label="Schematic connectivity map showing SBM Pranav site in relation to Airport, Harbour, and Vagaikulam Toll"
-          role="img"
+          transition={{ duration: 0.5 }}
+          className="bg-background border border-border overflow-hidden"
         >
-          <div
-            className="absolute inset-0 opacity-30"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(0,0,0,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.08) 1px, transparent 1px)",
-              backgroundSize: "36px 36px",
-            }}
-            aria-hidden="true"
-          />
-          <svg
-            className="absolute inset-0 w-full h-full"
-            viewBox="0 0 1000 320"
-            preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-          >
-            <motion.path
-              initial={{ pathLength: 0 }}
-              whileInView={{ pathLength: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 2 }}
-              d="M 200 160 Q 360 60 500 160 T 800 100"
-              fill="transparent"
-              stroke={GOLD}
-              strokeWidth="2"
-              strokeDasharray="8,5"
-            />
-            <motion.path
-              initial={{ pathLength: 0 }}
-              whileInView={{ pathLength: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 2, delay: 0.5 }}
-              d="M 500 160 Q 620 260 800 220"
-              fill="transparent"
-              stroke={GOLD}
-              strokeWidth="2"
-              strokeDasharray="8,5"
-            />
-          </svg>
-
-          <div className="absolute left-[20%] top-[50%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-            <div
-              className="w-3.5 h-3.5 rounded-full animate-pulse"
-              style={{ background: GOLD, boxShadow: `0 0 14px ${GOLD}` }}
-            />
-            <span
-              className="mt-1.5 text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 bg-background border border-border"
-              style={{ color: GOLD }}
-            >
-              Airport
-            </span>
+          {/* Tab bar */}
+          <div className="flex border-b border-border">
+            {MAP_TABS.map((tab, i) => (
+              <button
+                key={tab.label}
+                onClick={() => setActive(i)}
+                className={`flex-1 flex flex-col items-center gap-0.5 py-3 px-2 text-xs font-bold uppercase tracking-wider transition-colors duration-200 relative
+                  ${active === i
+                    ? "text-primary bg-primary/5"
+                    : "text-muted-foreground hover:text-primary hover:bg-primary/5"
+                  }`}
+              >
+                {active === i && (
+                  <motion.div layoutId="map-tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
+                )}
+                <span>{tab.label}</span>
+                <span className={`text-[10px] font-normal ${active === i ? "text-primary" : "text-muted-foreground/70"}`}>{tab.dist}</span>
+              </button>
+            ))}
           </div>
 
-          <div className="absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-10">
-            <div
-              className="w-5 h-5 border-2 flex items-center justify-center shadow-md"
-              style={{ borderColor: GOLD, background: "white" }}
-            >
-              <div className="w-2 h-2" style={{ background: GOLD }} />
-            </div>
-            <span className="mt-2 text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 bg-background border border-border text-foreground">
-              SBM PRANAV
-            </span>
-          </div>
-
-          <div className="absolute left-[80%] top-[32%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-            <div
-              className="w-3 h-3 border"
-              style={{ borderColor: GOLD, background: "rgba(201,162,39,0.2)" }}
-            />
-            <span className="mt-1.5 text-[10px] font-bold tracking-widest text-muted-foreground uppercase px-1 bg-background">
-              Harbour 20km
-            </span>
-          </div>
-
-          <div className="absolute left-[80%] top-[68%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-            <div
-              className="w-3 h-3 border"
-              style={{ borderColor: MAROON, background: "rgba(115,28,28,0.15)" }}
-            />
-            <span className="mt-1.5 text-[10px] font-bold tracking-widest text-muted-foreground uppercase px-1 bg-background">
-              Vagaikulam Toll
-            </span>
+          {/* Map image */}
+          <div className="relative w-full" style={{ aspectRatio: "16/7" }}>
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={active}
+                src={MAP_TABS[active].img}
+                alt={MAP_TABS[active].alt}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
+            </AnimatePresence>
           </div>
         </motion.div>
       </div>

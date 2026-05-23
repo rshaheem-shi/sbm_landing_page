@@ -12,33 +12,33 @@ interface Feature {
 const FEATURES: Feature[] = [
   {
     icon: MapPin,
-    title: "Strategic Location",
-    desc: "Dead center between the airport, harbour, and major toll plazas.",
+    title: "Market Expertise",
+    desc: "Over a decade of real estate experience with deep understanding of market trends, investment potential, and customer expectations.",
   },
   {
     icon: Globe,
-    title: "High Visibility Frontage",
-    desc: "400ft directly facing the National Highway for unmatched brand exposure.",
+    title: "Transparent Dealings",
+    desc: "Clear communication, honest pricing, and complete process transparency that build long-term customer trust and confidence.",
   },
   {
     icon: TrendingUp,
-    title: "Future Growth Corridor",
-    desc: "Positioned in a government-backed industrial expansion zone.",
+    title: "Professional Guidance",
+    desc: "Dedicated support from property selection to final registration, ensuring a smooth and hassle-free buying experience.",
   },
   {
     icon: Scale,
-    title: "Commercial Scalability",
-    desc: "2.5 contiguous acres allows for massive, multi-phase developments.",
+    title: "Verified Properties",
+    desc: "Every project undergoes careful verification for legal clarity, documentation accuracy, and secure ownership assurance.",
   },
   {
     icon: Activity,
-    title: "Infrastructure Connectivity",
-    desc: "Instant access to power grids, heavy transit roads, and utilities.",
+    title: "Customer Commitment",
+    desc: "Focused on building lasting relationships through reliable service, responsive support, and customer-first business practices.",
   },
   {
     icon: Shield,
-    title: "Long-Term Value",
-    desc: "A generational asset with clear title and zero encumbrances.",
+    title: "Strong Reputation",
+    desc: "Known for credibility, consistency, and delivering valuable real estate opportunities trusted by buyers and investors alike.",
   },
 ];
 

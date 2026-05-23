@@ -57,12 +57,12 @@ export default function UseCases() {
                 {title}
               </h3>
               <p className="text-muted-foreground text-xs mt-auto leading-relaxed">{desc}</p>
-              <div
+              {/* <div
                 className="mt-4 flex items-center text-primary text-xs font-bold opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
                 aria-hidden="true"
               >
                 High ROI <ArrowUpRight className="ml-1 w-3 h-3" />
-              </div>
+              </div> */}
             </motion.li>
           ))}
 

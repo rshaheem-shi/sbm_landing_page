@@ -6,7 +6,7 @@ const LOCATION_CARDS = [
   {
     icon: Plane,
     title: "Airport Connectivity",
-    desc: "1–2 KM from Tuticorin Airport. Fast access for corporate travel, logistics, and business expansion.",
+    desc: "1 KM from Tuticorin Airport. Fast access for corporate travel, logistics, and business expansion.",
   },
   {
     icon: Ship,

@@ -18,8 +18,6 @@ export default function LandingPage() {
         <Hero />
         <Location />
         <UseCases />
-        <Investment />
-        <Investors />
         <WhySBM />
         <Gallery />
         <Contact />

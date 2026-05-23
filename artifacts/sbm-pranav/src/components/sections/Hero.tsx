@@ -9,7 +9,7 @@ import sitePhoto from "@assets/magnific_vuRoQ8xa47_(1)_1779344385534.png";
 const PILLS = [
   { icon: Map,        label: "2.5 Acre Land" },
   { icon: Globe,      label: "400 Ft Frontage" },
-  { icon: Plane,      label: "1–2 KM Airport" },
+  { icon: Plane,      label: "1 KM Airport" },
   { icon: Ship,       label: "20 KM Harbour" },
   { icon: MapPin,     label: "Vagaikulam Toll" },
   { icon: TrendingUp, label: "High Appreciation" },
@@ -116,15 +116,6 @@ export default function Hero() {
               aria-label="WhatsApp consultation — opens in new tab"
             >
               <MessageSquare className="mr-2 w-4 h-4" aria-hidden="true" /> WhatsApp
-            </Button>
-            <Button
-              size="lg"
-              variant="ghost"
-              className="text-white/80 hover:bg-white/10 h-12 px-7 text-sm font-semibold rounded-none"
-              onClick={() => navigate("/brochure")}
-              aria-label="View investment brochure"
-            >
-              <Download className="mr-2 w-4 h-4" aria-hidden="true" /> Brochure
             </Button>
           </motion.div>
         </motion.div>

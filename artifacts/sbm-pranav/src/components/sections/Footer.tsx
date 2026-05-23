@@ -7,7 +7,7 @@ const QUICK_LINKS = [
   { id: "location",   label: "Location Advantage" },
   { id: "usecases",  label: "Commercial Uses" },
   // { id: "investment", label: "Investment Thesis" },
-  { id: "gallery",   label: "Site Gallery" },
+  // { id: "gallery",   label: "Site Gallery" },
   { id: "contact",   label: "Contact Us" },
 ] as const;
 

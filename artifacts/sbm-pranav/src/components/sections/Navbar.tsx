@@ -8,8 +8,8 @@ import logoImg from "@assets/SBM_Pranav_1779330703662.png";
 const NAV_LINKS = [
   { id: "location", label: "Location" },
   { id: "usecases", label: "Opportunities" },
-  { id: "investment", label: "Investment" },
-  { id: "gallery", label: "Gallery" },
+  // { id: "investment", label: "Investment" },
+  // { id: "gallery", label: "Gallery" },
 ] as const;
 
 export default function Navbar() {

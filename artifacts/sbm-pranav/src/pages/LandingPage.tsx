@@ -19,7 +19,7 @@ export default function LandingPage() {
         <Location />
         <UseCases />
         <WhySBM />
-        <Gallery />
+        {/* <Gallery /> */}
         <Contact />
       </main>
       <Footer />

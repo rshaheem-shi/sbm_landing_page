@@ -142,7 +142,7 @@ export default function LandingPage() {
           <div className="hidden md:flex items-center space-x-7">
             {[["location","Location"],["usecases","Opportunities"],["investment","Investment"],["gallery","Gallery"]].map(([id,label]) => (
               <button key={id} onClick={() => scrollTo(id)}
-                className="text-sm text-muted-foreground hover:text-primary transition-colors font-medium tracking-wide">
+                className={`text-sm hover:text-primary transition-colors font-medium tracking-wide ${isScrolled ? "text-muted-foreground" : "text-white/90"}`}>
                 {label}
               </button>
             ))}

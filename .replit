@@ -11,6 +11,27 @@ env = { "CI" = "true" }
 [workflows]
 runButton = "Project"
 
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "SBM Pranav"
+
+[[workflows.workflow]]
+name = "SBM Pranav"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "PORT=24708 BASE_PATH=/ pnpm --filter @workspace/sbm-pranav run dev"
+waitForPort = 24708
+
 [agent]
 stack = "PNPM_WORKSPACE"
 expertMode = true
